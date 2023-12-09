@@ -1,0 +1,117 @@
+/* 
+    Глобальные настройки стилей
+    для всего сайта
+*/
+*{
+    font-family: 'Comfortaa', sans-serif;
+}
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #003D66;
+}
+body {
+    background-color: #e0f7ff;
+    background-image: url("https://thumb.tildacdn.com/tild3765-3634-4265-a437-623639303663/-/format/webp/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* 
+    Заголовок (header)
+*/
+header {
+    background-color: #e0f7ff;
+    height: 100px;
+}
+header *{
+    color:black;
+}
+header h1 {
+    margin-top: 25px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: right;
+}
+header ul li {
+    float: left;
+    position: relative;
+}
+header ul li a {
+    display: block;
+    font-size: 1.2rem;
+    padding: 36px 20px;
+}
+header ul li a:hover {
+    background-color: #e8e9e3;
+    transition: 0.5s;
+}
+header ul li ul {
+    position: absolute;
+    top: 100px;
+    right: -10px;
+    width: 200px;
+    display: none;
+    z-index: 111;
+}
+header ul li:hover ul {
+    display: block;
+}
+header ul li ul li {
+    width: 100%;
+}
+header ul li ul li a {
+    padding: 10px;
+    background-color: #F3F4EE;
+}
+/* 
+    Карусель (slider)
+*/
+.slider-title {
+    text-align: left;
+    padding: 30px 12px 10px;
+}
+/* .carousel {
+    height: 500px;
+} */
+.carousel-inner, .carousel-item {
+    height: 500px;
+    border-radius: 5px;
+}
+.carousel-item img{
+    position: center;
+}
+.carousel-caption h5 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color:#e0f7ff;
+    max-width: 100%;
+    padding: 0.2em;
+    opacity: 0.5;
+}
+.carousel-caption {
+    position: absolute;
+    right: 0%;
+    bottom: 0.25rem;
+    left: 0%;
+    padding-top: 1.25rem;
+    padding-bottom: 2.25rem;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+.carousel-caption h5 a:hover {
+    text-decoration: underline;
+}

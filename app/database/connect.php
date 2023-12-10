@@ -5,10 +5,16 @@
     $db_name = 'shop';
     $charset = 'utf8';
 
-    $connection = @mysqli_connect($host, $db_user, $db_password, $db_name); // @ - для подавление предупреждений
-    mysqli_set_charset($connection, $charset);
+    // $connection = @mysqli_connect($host, $db_user, $db_password, $db_name); // @ - для подавление предупреждений
+    // mysqli_set_charset($connection, $charset);
 
-    if (!$connection) {
-        die('Ошибка при подключении: ' . mysqli_connect_error());
+    // if (!$connection) {
+    //     die('Ошибка при подключении: ' . mysqli_connect_error());
+    // }
+
+    $mysqli = @new mysqli($host, $db_user, $db_password, $db_name);
+
+    if ($mysqli->conect_errno) {
+        die('Ошибка при подключении: ' . $mysqli->connect_error);
     }
 ?>

@@ -312,3 +312,12 @@ header .tabs li ul li a {
     transition: all 0.3s;
     margin-left: 65px;
 }
+/*
+    Вывод ошибки при регистрации
+*/
+form div.err p {
+    color: red;
+    font-style: italic;
+    font-size: 1.1rem;
+    text-align: center;
+}

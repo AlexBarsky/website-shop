@@ -15,11 +15,11 @@ h6 {
     color: #003D66;
 }
 body {
-    background-color: #e0f7ff;
-    background-image: url("https://thumb.tildacdn.com/tild3765-3634-4265-a437-623639303663/-/format/webp/bg.jpg");
+    background-color: #F3F4EE;
+    /* background-image: url("https://thumb.tildacdn.com/tild3765-3634-4265-a437-623639303663/-/format/webp/bg.jpg");
     background-repeat: no-repeat;
     background-position: top center;
-    background-attachment: fixed;
+    background-attachment: fixed; */
 }
 a {
     text-decoration: none;
@@ -29,50 +29,90 @@ a {
     Заголовок (header)
 */
 header {
-    background-color: #e0f7ff;
-    height: 100px;
+    background-color: #F3F4EE;
+    height: 70px;
 }
 header *{
     color:black;
 }
 header h1 {
-    margin-top: 25px;
+    margin-top: 15px;
+    text-align: center;
 }
-
-header ul {
+header .btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #F3F4EE;
+    --bs-btn-border-color: #F3F4EE;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #e8e9e3;
+    --bs-btn-hover-border-color: #e8e9e3;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #e8e9e3;
+    --bs-btn-active-border-color: #e8e9e3;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #e8e9e3;
+    --bs-btn-disabled-border-color: #e8e9e3;
+    padding: 21px 20px;
+}
+.offcanvas-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x) 18px;
+    margin-top: 5px;
+    border-bottom: solid 1px rgb(158, 157, 157);
+}
+header .sections {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+header .tabs {
     margin: 0;
     padding: 0;
     list-style-type: none;
     float: right;
 }
-header ul li {
+header .tabs li {
     float: left;
     position: relative;
 }
-header ul li a {
+header .sections li a {
     display: block;
     font-size: 1.2rem;
-    padding: 36px 20px;
+    padding: 21px 0;
 }
-header ul li a:hover {
+header .tabs li a {
+    display: block;
+    font-size: 1.2rem;
+    padding: 21px 20px;
+}
+header .sections li a:hover {
+    padding-left: 10px;
+    transition: 0.3s;
+}
+header .tabs li a:hover, .sections li a:hover {
     background-color: #e8e9e3;
     transition: 0.5s;
 }
-header ul li ul {
+header .tabs li ul {
+    list-style-type: none;
     position: absolute;
-    top: 100px;
-    right: -10px;
+    top: 70px;
+    right: 0;
     width: 200px;
     display: none;
     z-index: 111;
 }
-header ul li:hover ul {
+header .tabs li:hover ul {
     display: block;
 }
-header ul li ul li {
+header .tabs li ul li {
     width: 100%;
 }
-header ul li ul li a {
+header .tabs li ul li a {
     padding: 10px;
     background-color: #F3F4EE;
 }
@@ -83,23 +123,14 @@ header ul li ul li a {
     text-align: left;
     padding: 30px 12px 10px;
 }
-/* .carousel {
-    height: 500px;
-} */
+.carousel {
+    height: 850px;
+}
 .carousel-inner, .carousel-item {
-    height: 500px;
-    border-radius: 5px;
+    height: 850px;
 }
 .carousel-item img{
     position: center;
-}
-.carousel-caption h5 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    background-color:#e0f7ff;
-    max-width: 100%;
-    padding: 0.2em;
-    opacity: 0.5;
 }
 .carousel-caption {
     position: absolute;
@@ -112,6 +143,108 @@ header ul li ul li a {
     text-align: center;
     width: 100%;
 }
-.carousel-caption h5 a:hover {
+.carousel-caption h5 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 20%;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color:#195C8D;
+    color: #F3F4EE;
+    padding: 0.5em;
+    opacity: 0.5;
+}
+.carousel-caption h5 i {
+    margin-left: 20px;
+}
+/* 
+    Данные на главной странице (Main) 
+*/
+.content-title h2 {
+    margin: 30px 0px 20px;
+}
+.item-content h3 {
+    padding: 8px;
+}
+.item-content:hover {
+    cursor: pointer;
+}
+/* 
+    Нижний колонтитул (Footer)
+*/
+.footer {
+    background-color: #195C8D;
+    color: #F3F4EE;
+    position: relative;
+}
+.footer .section {
+    padding: 22px;
+}
+.footer .section p {
     text-decoration: underline;
+}
+.footer h3, .footer h4 {
+    color: #F3F4EE;
+}
+.footer .about .contact span {
+    display: block;
+    font-size: 0.8em;
+    margin-bottom: 8px;
+}
+.footer .about .socials a {
+    width: 45px;
+    height: 41px;
+    padding-top: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.8em;
+    color: #74C9E3;
+}
+.footer .about .socials a:hover {
+    color: #F3F4EE;
+    transition: all 0.3s;
+}
+.footer .links ul a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+.footer .links ul a:hover {
+    padding-left: 15px;
+    transition: all 0.3s;
+}
+.footer .contact-form .contact-input {
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: solid 1px #F3F4EE;
+    line-height: 1.5rem;
+    padding: 0.9rem 1.4rem;
+}
+.footer .contact-form .contact-input:focus {
+    background-color: #F3F4EE;
+}
+.footer .contact-form .contact-btn {
+    color: #F3F4EE;
+    border: solid 1px #F3F4EE;
+    border-radius: 25px;
+    margin-top: 5px;
+    padding: 12px 22px 12px 20px;
+}
+.footer .contact-form .contact-btn i {
+    margin: 0 5px 0 20px;
+}
+.footer .contact-form .contact-btn:hover i {
+    transform: rotate(-0.25turn);
+    transition: 0.8s;
+}
+.footer .bottom {
+    background-color: #003D66;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
 }

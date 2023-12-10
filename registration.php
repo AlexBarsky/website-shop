@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="assets/css/style.css">
 
         <title>Shop</title>
     </head>
@@ -74,60 +74,36 @@
             </div>
         </header>
 
-        <!-- Основной блок -->
-        <div class="container">
-            <div class="text-center single-item-title row">
-                <div class="col-md-6 offset-md-3">
-                    <h3>Товар 1</h3>
+        <!-- Форма регистрации -->
+        <div class="container reg-form">
+            <form class="row justify-content-center" action="registration.html" method="post">
+                <h2 class="col-12">Форма регистрации</h2>
+                <div class="mb-3 col-12 col-md-4">
+                    <label for="formGroupExampleInput" class="form-label">Ваш логин</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Введите ваш логин...">
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="single-item-pic col-md-8">
-                    <img src="images\6.jpg" alt="item1" class="rounded mx-auto d-block">
+                <div class="w-100"></div>
+                <div class="mb-3 col-12 col-md-4">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваш email...">
+                    <div id="emailHelp" class="form-text">Ваш email адрес не будет использован для спама!</div>
                 </div>
-                <div class="single-item-form col-6 col-md-4">
-                    <h4>
-                        999
-                        <i class="fa-solid fa-ruble-sign"></i>
-                    </h4>
-                    <form action="#" method="post">
-                        <button type="submit" class="btn btn-big add-to-bucket-btn">
-                            Добавить в корзину
-                        </button>
-                        <button type="submit" class="btn btn-big add-to-fav-btn">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                    </form>
+                <div class="w-100"></div>
+                <div class="mb-3 col-12 col-md-4">
+                    <label for="exampleInputPassword1" class="form-label">Пароль</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите ваш парол...">
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="single-item-desc col">
-                    <h5>
-                        ТОВАР 1
-                    </h5>
-                    <p class="articul">
-                        артикул: id
-                    </p>
-                    <p>
-                        «Изумрудный Серенгети» - посвящение бесконечным африканским равнинам, которые поражают воображение своей изумрудной красотой.
-                        Звенящий аромат, в котором вступительным аккордом выступают ноты свежескошенной травы. 
-                        Сердце аромата будоражит кристальной свежестью зеленых нот, которая подчеркнута чистотой мускусного шлейфа.
-                    </p>
-                    <p class="char-title">
-                        подробные характеристики:
-                    </p>
-                    <p class="characteristics">
-                        тип продукта - диффузоры</br>
-                        для кого - унисекс</br>
-                        группа ароматов - травяные</br>
-                        верхние ноты - свежескошенная трава</br>
-                        средние ноты - зеленые ноты, апельсин, помело</br>
-                        базовые ноты - лайм, белый мускус
-                    </p>
+                <div class="w-100"></div>
+                <div class="mb-3 col-12 col-md-4">
+                    <label for="exampleInputPassword2" class="form-label">Подтврердите пароль</label>
+                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Повторите ваш пароль...">
                 </div>
-            </div>
+                <div class="w-100"></div>
+                <div class="mb-3 col-12 col-md-4">
+                    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                    <a href="login.php">Войти</a>
+                </div>
+            </form>
         </div>
 
         <!-- Нижний колонтитул -->
@@ -184,6 +160,6 @@
         
         <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/393e1b9e6d.js" crossorigin="anonymous"></script>
-        
+
     </body>
 </html>

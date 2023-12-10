@@ -1,3 +1,3 @@
 <?php
-    define('BASE_URL', 'http://shop');
+    define('BASE_URL', 'http://shop/');
 ?>

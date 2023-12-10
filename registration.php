@@ -28,7 +28,7 @@
                 <div class="w-100"></div>
                 <div class="mb-3 col-12 col-md-4">
                     <label for="exampleInputPassword1" class="form-label">Пароль</label>
-                    <input type="password" name="pass" class="form-control" id="exampleInputPassword1" placeholder="Введите ваш парол...">
+                    <input type="password" name="pass" class="form-control" id="exampleInputPassword1" placeholder="Введите ваш пароль...">
                 </div>
                 <div class="w-100"></div>
                 <div class="mb-3 col-12 col-md-4">

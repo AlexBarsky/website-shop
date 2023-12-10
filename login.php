@@ -1,4 +1,7 @@
-<?php include "path.php"; ?>
+<?php 
+    include "path.php"; 
+    include "app/controllers/users.php";
+?>
 
 <!doctype html>
 <html lang="en">
@@ -13,18 +16,22 @@
             <form class="row justify-content-center" action="login.php" method="post">
                 <h2 class="col-12">Войти</h2>
                 <div class="mb-3 col-12 col-md-4">
-                    <label for="formGroupExampleInput" class="form-label">Ваш логин</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Введите ваш логин..." required>
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" name="mail" value="<?=$email?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваш email...">
                 </div>
                 <div class="w-100"></div>
                 <div class="mb-3 col-12 col-md-4">
                     <label for="exampleInputPassword1" class="form-label">Пароль</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите ваш парол..." required>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Введите ваш парол...">
                 </div>
                 <div class="w-100"></div>
                 <div class="mb-3 col-12 col-md-4">
-                    <button type="submit" class="btn btn-primary" name="button-auth">Войти</button>
+                    <button type="submit" class="btn btn-primary" name="button-log">Войти</button>
                     <a href="<?php echo BASE_URL . '/registration.php'; ?>">Зарегистрироваться</a>
+                </div>
+                <div class="w-100"></div>
+                <div class="mb-3 col-12 col-md-4 err">
+                    <p><?=$err_msg?></p>
                 </div>
             </form>
         </div>

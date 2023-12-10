@@ -1,7 +1,9 @@
 <?php
+    session_start();
+
     require 'connect.php';
 
-    function tt($value) {
+    function debug($value) {
         echo "<pre>";
         print_r($value);
         echo "<pre>";

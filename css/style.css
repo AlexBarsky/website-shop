@@ -168,11 +168,12 @@ header .tabs li ul li a {
 .item-content h3 {
     padding: 8px;
     margin-bottom: 0;
+    transition: all 0.3s;
 }
 .item-content h3:hover {
     cursor: pointer;
     color: #74C9E3;
-    transition: 0.3s;
+    transition: all 0.3s;
 }
 /* 
     Нижний колонтитул (Footer)
@@ -205,6 +206,7 @@ header .tabs li ul li a {
     display: inline-block;
     font-size: 1.8em;
     color: #74C9E3;
+    transition: all 0.3s;
 }
 .footer .about .socials a:hover {
     color: #F3F4EE;
@@ -214,6 +216,7 @@ header .tabs li ul li a {
     display: block;
     margin-bottom: 10px;
     font-size: 1.2em;
+    transition: all 0.3s;
 }
 .footer .links ul a:hover {
     padding-left: 15px;
@@ -238,10 +241,11 @@ header .tabs li ul li a {
 }
 .footer .contact-form .contact-btn i {
     margin: 0 5px 0 20px;
+    transition: all 0.8s;
 }
 .footer .contact-form .contact-btn:hover i {
     transform: rotate(-0.25turn);
-    transition: 0.8s;
+    transition: all 0.8s;
 }
 .footer .bottom {
     background-color: #003D66;
@@ -287,4 +291,24 @@ header .tabs li ul li a {
 }
 .single-item-desc .char-title {
     font-weight: bold;
+}
+/* 
+    Страница регистрации (Reg-form)
+*/
+.reg-form h2 {
+    text-align: center;
+    margin: 30px 0px 20px;
+}
+.reg-form input {
+    height: 3rem;
+}
+.reg-form a {
+    font-size: 1.2em;
+    transition: all 0.3s;
+    color: #195C8D;
+    margin-left: 55px;
+}
+.reg-form a:hover {
+    transition: all 0.3s;
+    margin-left: 65px;
 }

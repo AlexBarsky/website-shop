@@ -31,6 +31,7 @@ a {
 header {
     background-color: #F3F4EE;
     height: 70px;
+    border-bottom: solid 1px #e8e9e3;
 }
 header *{
     color:black;
@@ -166,9 +167,12 @@ header .tabs li ul li a {
 }
 .item-content h3 {
     padding: 8px;
+    margin-bottom: 0;
 }
-.item-content:hover {
+.item-content h3:hover {
     cursor: pointer;
+    color: #74C9E3;
+    transition: 0.3s;
 }
 /* 
     Нижний колонтитул (Footer)
@@ -177,6 +181,7 @@ header .tabs li ul li a {
     background-color: #195C8D;
     color: #F3F4EE;
     position: relative;
+    margin-top: 50px;
 }
 .footer .section {
     padding: 22px;
@@ -247,4 +252,39 @@ header .tabs li ul li a {
     bottom: 0px;
     left: 0px;
     padding-top: 20px;
+}
+/* 
+    Страница товара (Single-item landing)
+*/
+.single-item-title h3 {
+    margin: 30px 0px 20px;
+    font-size: 2.2em;
+}
+.single-item-form {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.single-item-form h4 {
+    padding-left: 12px;
+}
+.single-item-form button {
+    background-color: #195C8D;
+    color: #F3F4EE;
+    border: solid 2px #195C8D;
+}
+.single-item-form button:hover {
+    background-color: #e8e9e3;
+    border: solid 2px #195C8D;
+}
+.single-item-desc h5 {
+    font-weight: bold;
+    font-size: large;
+    margin-top: 30px;
+}
+.single-item-desc .articul {
+    font-weight: lighter;
+    font-size: small;
+}
+.single-item-desc .char-title {
+    font-weight: bold;
 }

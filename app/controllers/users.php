@@ -70,7 +70,7 @@
                 $_SESSION['admin'] = $exist['admin'];
                 
                 if ($_SESSION['admin']) {
-                    header('location: ' . BASE_URL . "admin/admin.php");
+                    header('location: ' . BASE_URL . "admin/items/index.php");
                 }else {
                     header('location: ' . BASE_URL);
                 }

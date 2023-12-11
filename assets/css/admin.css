@@ -22,7 +22,7 @@ a {
     color: inherit;
 }
 /* 
-    Заголовок (header)
+Заголовок (header)
 */
 header {
     background-color: #F3F4EE;
@@ -114,70 +114,12 @@ header .tabs li ul li a {
     background-color: #F3F4EE;
 }
 /* 
-    Карусель (slider)
-*/
-.slider-title {
-    text-align: left;
-    padding: 30px 12px 10px;
-}
-.carousel {
-    height: 850px;
-}
-.carousel-inner, .carousel-item {
-    height: 850px;
-}
-.carousel-item img{
-    position: center;
-}
-.carousel-caption {
-    position: absolute;
-    right: 0%;
-    bottom: 0.25rem;
-    left: 0%;
-    padding-top: 1.25rem;
-    padding-bottom: 2.25rem;
-    color: #fff;
-    text-align: center;
-    width: 100%;
-}
-.carousel-caption h5 {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 20%;
-    border-radius: 20px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    background-color:#195C8D;
-    color: #F3F4EE;
-    padding: 0.5em;
-    opacity: 0.5;
-}
-.carousel-caption h5 i {
-    margin-left: 20px;
-}
-/* 
-    Данные на главной странице (Main) 
-*/
-.content-title h2 {
-    margin: 30px 0px 20px;
-}
-.item-content h3 {
-    padding: 8px;
-    margin-bottom: 0;
-    transition: all 0.3s;
-}
-.item-content h3:hover {
-    cursor: pointer;
-    color: #74C9E3;
-    transition: all 0.3s;
-}
-/* 
     Нижний колонтитул (Footer)
 */
 .footer {
     background-color: #195C8D;
     color: #F3F4EE;
-    position: relative;
+    position: fixed;
     bottom: 0;
     margin-top: 50px;
 }
@@ -255,66 +197,61 @@ header .tabs li ul li a {
     padding-top: 20px;
 }
 /* 
-    Страница товара (Single-item landing)
+    Боковая панель (Sidebar)
 */
-.single-item-title h3 {
-    margin: 30px 0px 20px;
-    font-size: 2.2em;
-}
-.single-item-form {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-.single-item-form h4 {
-    padding-left: 12px;
-}
-.single-item-form button {
+.sidebar {
+    margin: 1rem 0;
     background-color: #195C8D;
+    min-height: 600px;
+}
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     color: #F3F4EE;
-    border: solid 2px #195C8D;
 }
-.single-item-form button:hover {
-    background-color: #e8e9e3;
-    border: solid 2px #195C8D;
+.sidebar ul a {
+    padding: 18px;
+    display: block;
+    border-bottom: solid 1px #F3F4EE;
 }
-.single-item-desc h5 {
-    font-weight: bold;
-    font-size: large;
-    margin-top: 30px;
+.sidebar ul a:hover {
+    padding-left: 10px;
+    transition: all 0.3s;
+    color: #e8e9e3;
+    text-decoration: none;
 }
-.single-item-desc .articul {
-    font-weight: lighter;
-    font-size: small;
+.items{
+    height: 100%;
+    padding: 40px 100px 100px;
 }
-.single-item-desc .char-title {
+.items h2 {
+    text-align: center;
+    margin: 2rem 0 0 0.4rem;
+}
+.items .table-title div {
+    padding: 15px;
+    text-align: center;
+    border-bottom: solid 1px #195C8D;
+    font-weight: 900;
+}
+.items .item div {
+    padding: 15px;
+    text-align: left;
+    border-bottom: solid 1px #195C8D;
+}
+.items .item .edit {
+    color: #003D66;
+}
+.items .item .del {
+    color: red;
+}
+.items .item .id {
     font-weight: bold;
 }
 /* 
-    Страница регистрации (Reg-form)
+    Добавление товара (Create item)
 */
-.reg-form h2 {
-    text-align: center;
-    margin: 30px 0px 20px;
-}
-.reg-form input {
-    height: 3rem;
-}
-.reg-form a {
-    font-size: 1.2em;
-    transition: all 0.3s;
-    color: #195C8D;
-    margin-left: 55px;
-}
-.reg-form a:hover {
-    transition: all 0.3s;
-    margin-left: 65px;
-}
-/*
-    Вывод ошибки при регистрации
-*/
-form div.err p {
-    color: red;
-    font-style: italic;
-    font-size: 1.1rem;
-    text-align: center;
+.add-item form div {
+    margin: 2rem 0;
 }

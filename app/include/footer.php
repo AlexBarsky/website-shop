@@ -29,7 +29,7 @@
 
             <div class="section contact-form col-md-4 col-12">
                 <h3>Скидка 10%</h3>
-                <form action="<?php echo BASE_URL . '/registration.php'; ?>" method="post">
+                <form action="index.php" method="post">
                     <input type="text" name="nm" class="text-input contact-input" placeholder="Your name..." required>
                     <input type="tel" name="phone" class="text-input contact-input"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="+7">
                     <input type="email" name="email" class="text-input contact-input" placeholder="Your email address..." required>

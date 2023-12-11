@@ -86,7 +86,6 @@
 
     // Обработка формы редактирование товара
     if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
-        $id = $_GET['id'];
         $item = select('items', ['id' => $id], true);
 
         $id = $item['id'];

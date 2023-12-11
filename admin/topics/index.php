@@ -46,7 +46,7 @@
                         <div class="id col-1"><?=$key + 1; ?></div>
                         <div class="title col-5"><?=$topic['title']; ?></div>
                         <div class="edit col-3"><a href="edit.php?id=<?=$topic['id']; ?>"><i class="fa-solid fa-pen"></i></a></div>
-                        <div class="del col-3"><a href="edit.php?delete-id=<?=$topic['id']; ?>"><i class="fa-solid fa-xmark"></i></a></div>
+                        <div class="del col-3"><a href="index.php?delete-id=<?=$topic['id']; ?>"><i class="fa-solid fa-xmark"></i></a></div>
                     </div>
                     <?php endforeach; ?>
                 </div>

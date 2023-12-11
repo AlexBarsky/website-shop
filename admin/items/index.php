@@ -52,7 +52,7 @@
                         <div class="amount col-1"><?=$item['amount']; ?></div>
                         <div class="price col-1"><?=$item['price']; ?></div>
                         <div class="edit col-2"><a href="edit.php?id=<?=$item['id']; ?>"><i class="fa-solid fa-pen"></i></a></div>
-                        <div class="del col-2"><a href="edit.php?delete-id=<?=$item['id']; ?>"><i class="fa-solid fa-xmark"></i></a></div>
+                        <div class="del col-2"><a href="index.php?delete-id=<?=$item['id']; ?>"><i class="fa-solid fa-xmark"></i></a></div>
                     </div>
                     <?php endforeach; ?>
                 </div>

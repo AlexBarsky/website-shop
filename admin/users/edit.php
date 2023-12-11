@@ -39,17 +39,18 @@
                         <h2>Добавление пользователя</h2>
                     </div>
                     <div class="row add-item">
-                        <form action="create.php" method="post">
+                        <form action="edit.php" method="post">
+                            <input name="id" type="hidden" value="<?=$id; ?>">
                             <div class="col">
                                 <label for="formGroupExampleInput" class="form-label">Логин</label>
                                 <input type="text" name="login" value="<?=$login; ?>" class="form-control" id="formGroupExampleInput" placeholder="Введите логин...">
                             </div>
                             <div class="col">
                                 <label for="exampleInputEmail1" class="form-label">Email</label>
-                                <input type="email" name="email" value="<?=$email; ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите email...">
+                                <input type="email" name="email" value="<?=$email; ?>" readonly class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите email...">
                             </div>
                             <div class="col">
-                                <label for="exampleInputPassword1" class="form-label">Пароль</label>
+                                <label for="exampleInputPassword1" class="form-label">Сбросить пароль</label>
                                 <input type="password" name="pass" class="form-control" id="exampleInputPassword1" placeholder="Введите пароль...">
                             </div>
                             <div class="col">
@@ -61,7 +62,7 @@
                                 Админ?
                             </label>
                             <div class="col">
-                                <button name="button-create" class="btn btn-primary" type="submit">Добавить</button>
+                                <button name="button-edit" class="btn btn-primary" type="submit">Сохранить</button>
                             </div>
                             <div class="col err">
                                 <?php include "../../app/helps/error-info.php"; ?>

@@ -1,6 +1,6 @@
 <?php
-    session_start();
     include "../../path.php";
+    include "../../app/controllers/items.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -40,25 +40,35 @@
                     </div>
                     <div class="row add-item">
                         <form action="create.php" method="post">
+                            <div></div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Название товара" aria-label="Название товара">
+                                <input value="<?=$title; ?>" name="title" type="text" class="form-control" placeholder="Название товара" aria-label="Название товара">
                             </div>
                             <div class="col">
                                 <label for="description" class="form-label">Описание товара</label>
-                                <textarea class="form-control" id="description" rows="6"></textarea>
+                                <textarea name="description" class="form-control" id="description" rows="6"><?=$description; ?></textarea>
                             </div>
                             <div class="input-group col">
-                                <input type="file" class="form-control" id="inputGroupFile02">
+                                <input name="img" type="file" class="form-control" id="inputGroupFile02">
                                 <label class="input-group-text" for="inputGroupFile02">Upload</label>
                             </div>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                            <select name="topic_id" class="form-select" aria-label="Default select example">
+                                <option selected>--Выбрать категорию--</option>
+                                <?php foreach ($topics as $key => $topic): ?>
+                                    <option value="<?=$topic['id']; ?>"><?=$topic['title']; ?></option>
+                                <?php endforeach; ?>
                             </select>
                             <div class="col">
-                                <button class="btn btn-primary" type="submit">Добавить</button>
+                                <input value="<?=$amount; ?>" name="amount" type="number" class="form-control" placeholder="Количество товара" aria-label="Количество товара">
+                            </div>
+                            <div class="col">
+                                <input value="<?=$price; ?>" name="price" type="text" class="form-control" placeholder="Цена за штуку" aria-label="Цена товара">
+                            </div>
+                            <div class="col">
+                                <button name="button-create" class="btn btn-primary" type="submit">Добавить</button>
+                            </div>
+                            <div class="col err">
+                                <?php include "../../app/helps/error-info.php"; ?>
                             </div>
                         </form>
                     </div>

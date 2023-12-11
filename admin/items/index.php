@@ -1,6 +1,6 @@
 <?php
-    session_start();
     include "../../path.php";
+    include "../../app/controllers/items.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -38,17 +38,23 @@
                     <div class="row table-title">
                         <h2>Управление товарами</h2>
                         <div class="col-1">ID</div>
-                        <div class="col-5">Название</div>
+                        <div class="col-3">Название</div>
                         <div class="col-2">Автор</div>
+                        <div class="col-1">Кол-во</div>
+                        <div class="col-1">Цена</div>
                         <div class="col-4">Управление</div>
                     </div>
+                    <?php foreach ($items as $key => $item): ?>
                     <div class="row item">
-                        <div class="id col-1">1</div>
-                        <div class="title col-5">Товар 1</div>
-                        <div class="author col-2">Админ1</div>
-                        <div class="edit col-2"><a href=""><i class="fa-solid fa-pen"></i></a></div>
-                        <div class="del col-2"><a href=""><i class="fa-solid fa-xmark"></i></a></div>
+                        <div class="id col-1"><?=$key + 1; ?></div>
+                        <div class="title col-3"><?=$item['title']; ?></div>
+                        <div class="author col-2"><?=select('users', ['id' => $item['user_id']], true)['username']; ?></div>
+                        <div class="amount col-1"><?=$item['amount']; ?></div>
+                        <div class="price col-1"><?=$item['price']; ?></div>
+                        <div class="edit col-2"><a href="edit.php?id=<?=$item['id']; ?>"><i class="fa-solid fa-pen"></i></a></div>
+                        <div class="del col-2"><a href="edit.php?delete-id=<?=$item['id']; ?>"><i class="fa-solid fa-xmark"></i></a></div>
                     </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>

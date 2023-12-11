@@ -259,3 +259,16 @@ header .tabs li ul li a {
 .add-item form div {
     margin: 2rem 0;
 }
+/* 
+    Массив сообщений об ошибках
+*/
+.add-item .err {
+    padding: 1rem 0;
+    color: brown;
+}
+.add-item .err ul {
+    padding: 1rem 0;
+    list-style-type: none;
+    padding-left: 10px;
+    font-weight: 500;
+}

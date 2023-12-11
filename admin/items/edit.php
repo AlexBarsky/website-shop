@@ -34,7 +34,7 @@
                         <h2>Обновление товара</h2>
                     </div>
                     <div class="row add-item">
-                        <form action="edit.php" method="post">
+                        <form action="edit.php" method="post" enctype="multipart/form-data">
                             <input name="id" type="hidden" value="<?=$id; ?>">
                             <div class="col">
                                 <input value="<?=$title; ?>" name="title" type="text" class="form-control" placeholder="Название товара" aria-label="Название товара">

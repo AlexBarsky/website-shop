@@ -40,8 +40,8 @@
                         <div class="col-1">ID</div>
                         <div class="col-2">Логин</div>
                         <div class="col-3">E-mail</div>
-                        <div class="col-2">Роль</div>
-                        <div class="col-4">Управление</div>
+                        <div class="col-3">Статус</div>
+                        <div class="col-3">Управление</div>
                     </div>
                     <?php foreach ($users as $key => $user): ?>
                     <div class="row item">
@@ -53,8 +53,14 @@
                         <?php else: ?>
                             <div class="author col-2">User</div>
                         <?php endif; ?>
-                        <div class="edit col-2"><a href="edit.php?id=<?=$user['id']; ?>"><i class="fa-solid fa-pen"></i></a></div>
-                        <div class="del col-2"><a href="index.php?delete-id=<?=$user['id']; ?>"><i class="fa-solid fa-xmark"></i></a></div>
+                        <?php if($user['banned'] == 1): ?>
+                            <div class="author col-1">Band</div>
+                        <?php else: ?>
+                            <div class="author col-1">NoBan</div>
+                        <?php endif; ?>
+                        <div class="edit col-1"><a href="edit.php?id=<?=$user['id']; ?>"><i class="fa-solid fa-pen"></i></a></div>
+                        <div class="del col-1"><a href="index.php?delete-id=<?=$user['id']; ?>"><i class="fa-solid fa-xmark"></i></a></div>
+                        <div class="del col-1"><a href="index.php?ban-id=<?=$user['id']; ?>"><i class="fa-solid fa-ban"></i></a></div>
                     </div>
                     <?php endforeach; ?>
                 </div>

@@ -273,6 +273,12 @@ header .sections li:hover .topics  {
 /* 
     Страница товара (Single-item landing)
 */
+.single-item-pic img {
+    max-width: 800px; 
+}
+.bottom-content .single-item-desc {
+    margin-top: 80px;
+}
 .single-item-title h3 {
     margin: 30px 0px 20px;
     font-size: 2.2em;

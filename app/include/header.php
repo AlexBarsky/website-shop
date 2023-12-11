@@ -14,7 +14,7 @@
                     <div class="offcanvas-body">
                         <ul class="sections">
                             <li>
-                                <a href="#">Категории<i class="fa-solid fa-chevron-right"></i></a>
+                                <a href="catalog.php">Категории<i class="fa-solid fa-chevron-right"></i></a>
                                 <ul class="topics">
                                     <?php foreach ($topics as $key => $topic): ?>
                                     <li>

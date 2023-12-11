@@ -8,6 +8,7 @@
     // Обработка формы регистрации
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-reg'])) {
         $admin = 0;
+        $banned = 0;
         $login = trim($_POST['login']);                                 // Получаем данные из метода POST
         $email = trim($_POST['mail']);                                  // Убираем лишние пробелы функцией trim()
         $pass_first = trim($_POST['pass']);
@@ -37,7 +38,8 @@
                     'admin' => $admin,
                     'username' => $login,
                     'email' => $email,
-                    'password' => $pass
+                    'password' => $pass,
+                    'banned' => $banned
                 ];
 
                 $id = insert('users', $params);
@@ -63,8 +65,10 @@
             
             if (!$exist) {                                                      // Проверка на существование пользователя в системе через почту
                 array_push($err_msg, "Пользователь с указанной почтой не зарегистрирован!");
-            }elseif(!password_verify($pass, $exist['password'])) {             // Проверка на правильность ввода пароля
+            }elseif (!password_verify($pass, $exist['password'])) {             // Проверка на правильность ввода пароля
                 array_push($err_msg, "Указан неверный пароль!");
+            }elseif ($exist["banned"] == 1) {
+                array_push($err_msg, "Вы были заблокированы!");
             }else {
                 $_SESSION['id'] = $exist['id'];                                 // Записываем данные о залогиненом пользователе в сессию
                 $_SESSION['login'] = $exist['username'];
@@ -169,6 +173,12 @@
     if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['delete-id'])) {
         $id = $_GET['delete-id'];
         delete('users', $id);
+        header('location: ' . BASE_URL . 'admin/users/index.php');
+    }
+
+    if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['ban-id'])) {
+        $id = $_GET['ban-id'];
+        $user = update('users', $id, ['banned' => 1]);
         header('location: ' . BASE_URL . 'admin/users/index.php');
     }
 ?>

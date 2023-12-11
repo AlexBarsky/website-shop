@@ -41,8 +41,7 @@
 
     // Обработка формы редактирование категории
     if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
-        $id = $_GET['id'];
-        $topic = select('topics', ['id' => $id], true);
+        $topic = select('topics', ['id' => $_GET['id']], true);
 
         $id = $topic['id'];
         $title = $topic['title'];

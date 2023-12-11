@@ -39,7 +39,7 @@
                         <h2>Добавление товара</h2>
                     </div>
                     <div class="row add-item">
-                        <form action="create.php" method="post">
+                        <form action="create.php" method="post" enctype="multipart/form-data">
                             <div></div>
                             <div class="col">
                                 <input value="<?=$title; ?>" name="title" type="text" class="form-control" placeholder="Название товара" aria-label="Название товара">

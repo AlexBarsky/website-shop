@@ -18,11 +18,11 @@
 
     // Обработка формы создания товара
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-create'])) {
-
+        
         if (!empty($_FILES['img']['name'])) {
             $img_name = time() . "_" . $_FILES['img']['name'];
-            $file_tmp_name = $_FILES['img']['type'];
-            $file_type = $_FILES['img']['tmp_name'];
+            $file_tmp_name = $_FILES['img']['tmp_name'];
+            $file_type = $_FILES['img']['type'];
             $destination = ROOT_PATH . "\assets\images\items\\" . $img_name;
             
             if (strpos($file_type, 'image') === false) {
@@ -37,7 +37,6 @@
                     array_push($err_msg, "Ошибка загрузки изображения на сервер!");
                 }
             }
-
         }else {
             array_push($err_msg, "Ошибка получения картинки");
         }
@@ -86,8 +85,8 @@
 
     // Обработка формы редактирование товара
     if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
-        $item = select('items', ['id' => $id], true);
-
+        $item = select('items', ['id' => $_GET['id']], true);
+        
         $id = $item['id'];
         $title = $item['title'];
         $description = $item['description'];
@@ -96,11 +95,11 @@
         $price = $item['price'];
     }
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-edit'])) {
-
+        
         if (!empty($_FILES['img']['name'])) {
             $img_name = time() . "_" . $_FILES['img']['name'];
-            $file_tmp_name = $_FILES['img']['type'];
-            $file_type = $_FILES['img']['tmp_name'];
+            $file_tmp_name = $_FILES['img']['tmp_name'];
+            $file_type = $_FILES['img']['type'];
             $destination = ROOT_PATH . "\assets\images\items\\" . $img_name;
             
             if (strpos($file_type, 'image') === false) {

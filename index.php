@@ -1,6 +1,6 @@
 <?php 
-    include "path.php"; 
-    include "app/database/db.php";
+    include "path.php";
+    include "app/controllers/topics.php";
 ?>
 
 <!doctype html>

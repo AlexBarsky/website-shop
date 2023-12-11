@@ -1,4 +1,7 @@
-<?php include "path.php"; ?>
+<?php 
+    include "path.php";
+    include "app/controllers/topics.php";
+?>
 
 <!doctype html>
 <html lang="en">
@@ -38,28 +41,49 @@
 
             <div class="row">
                 <div class="single-item-desc col">
-                    <h5>
-                        ТОВАР 1
-                    </h5>
-                    <p class="articul">
-                        артикул: id
-                    </p>
-                    <p>
-                        «Изумрудный Серенгети» - посвящение бесконечным африканским равнинам, которые поражают воображение своей изумрудной красотой.
-                        Звенящий аромат, в котором вступительным аккордом выступают ноты свежескошенной травы. 
-                        Сердце аромата будоражит кристальной свежестью зеленых нот, которая подчеркнута чистотой мускусного шлейфа.
-                    </p>
-                    <p class="char-title">
-                        подробные характеристики:
-                    </p>
-                    <p class="characteristics">
-                        тип продукта - диффузоры</br>
-                        для кого - унисекс</br>
-                        группа ароматов - травяные</br>
-                        верхние ноты - свежескошенная трава</br>
-                        средние ноты - зеленые ноты, апельсин, помело</br>
-                        базовые ноты - лайм, белый мускус
-                    </p>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Описание</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Применение</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Состав</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Доп. информация</button>
+                            </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                        <h5>
+                            ТОВАР 1
+                        </h5>
+                        <p class="articul">
+                            артикул: id
+                        </p>
+                        <p>
+                            «Изумрудный Серенгети» - посвящение бесконечным африканским равнинам, которые поражают воображение своей изумрудной красотой.
+                            Звенящий аромат, в котором вступительным аккордом выступают ноты свежескошенной травы. 
+                            Сердце аромата будоражит кристальной свежестью зеленых нот, которая подчеркнута чистотой мускусного шлейфа.
+                        </p>
+                        <p class="char-title">
+                            подробные характеристики:
+                        </p>
+                        <p class="characteristics">
+                            тип продукта - диффузоры</br>
+                            для кого - унисекс</br>
+                            группа ароматов - травяные</br>
+                            верхние ноты - свежескошенная трава</br>
+                            средние ноты - зеленые ноты, апельсин, помело</br>
+                            базовые ноты - лайм, белый мускус
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+                    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
+                    <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
+                    </div>
                 </div>
             </div>
         </div>

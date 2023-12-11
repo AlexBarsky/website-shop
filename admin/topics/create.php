@@ -1,6 +1,8 @@
 <?php
     session_start();
+
     include "../../path.php";
+    include "../../app/controllers/topics.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -41,14 +43,17 @@
                     <div class="row add-item">
                         <form action="create.php" method="post">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Название категории" aria-label="Название категории">
+                                <input name="title" type="text" class="form-control" value="<?=$title; ?>" placeholder="Название категории" aria-label="Название категории">
                             </div>
                             <div class="col">
                                 <label for="description" class="form-label">Описание категории</label>
-                                <textarea class="form-control" id="description" rows="3"></textarea>
+                                <textarea name="description" class="form-control" id="description" rows="3"><?=$description; ?></textarea>
                             </div>
                             <div class="col">
-                                <button class="btn btn-primary" type="submit">Добавить</button>
+                                <button name="button-create" class="btn btn-primary" type="submit">Добавить</button>
+                            </div>
+                            <div class="col err">
+                                <p><?=$err_msg?></p>
                             </div>
                         </form>
                     </div>

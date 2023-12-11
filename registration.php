@@ -1,6 +1,7 @@
 <?php 
     include "path.php"; 
     include "app/controllers/users.php";
+    include "app/controllers/topics.php";
 ?>
 
 <!doctype html>

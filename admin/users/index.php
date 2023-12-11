@@ -46,8 +46,8 @@
                         <div class="id col-1">1</div>
                         <div class="title col-5">user1</div>
                         <div class="author col-2">Админ</div>
-                        <div class="edit col-2"><a href="">edit</a></div>
-                        <div class="del col-2"><a href="">delete</a></div>
+                        <div class="edit col-2"><a href=""><i class="fa-solid fa-pen"></i></a></div>
+                        <div class="del col-2"><a href=""><i class="fa-solid fa-xmark"></i></a></div>
                     </div>
                 </div>
             </div>
@@ -61,5 +61,9 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/393e1b9e6d.js" crossorigin="anonymous"></script>
+
     </body>
 </html>

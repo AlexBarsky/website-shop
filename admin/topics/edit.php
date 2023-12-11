@@ -38,19 +38,26 @@
                         <a href="<?php echo BASE_URL . "admin/topics/index.php"; ?>" class="col-3 btn btn-primary">Править</a>
                     </div>
                     <div class="row table-title">
-                        <h2>Управление категориями</h2>
-                        <div class="col-1">ID</div>
-                        <div class="col-5">Название</div>
-                        <div class="col-6">Управление</div>
+                        <h2>Обновление категории</h2>
                     </div>
-                    <?php foreach ($topics as $key => $topic): ?>
-                    <div class="row item">
-                        <div class="id col-1"><?=$key + 1; ?></div>
-                        <div class="title col-5"><?=$topic['title']; ?></div>
-                        <div class="edit col-3"><a href="edit.php?id=<?=$topic['id']; ?>"><i class="fa-solid fa-pen"></i></a></div>
-                        <div class="del col-3"><a href="edit.php?delete-id=<?=$topic['id']; ?>"><i class="fa-solid fa-xmark"></i></a></div>
+                    <div class="row add-item">
+                        <form action="edit.php" method="post">
+                            <input name="id" type="hidden" value="<?=$id; ?>">
+                            <div class="col">
+                                <input name="title" type="text" class="form-control" value="<?=$title; ?>" placeholder="Название категории" aria-label="Название категории">
+                            </div>
+                            <div class="col">
+                                <label for="description" class="form-label">Описание категории</label>
+                                <textarea name="description" class="form-control" id="description" rows="3"><?=$description; ?></textarea>
+                            </div>
+                            <div class="col">
+                                <button name="button-edit" class="btn btn-primary" type="submit">Обновить</button>
+                            </div>
+                            <div class="col err">
+                                <p><?=$err_msg?></p>
+                            </div>
+                        </form>
                     </div>
-                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -63,9 +70,5 @@
                 </div>
             </div>
         </div>
-
-        <!-- Font Awesome -->
-        <script src="https://kit.fontawesome.com/393e1b9e6d.js" crossorigin="anonymous"></script>
-
     </body>
 </html>

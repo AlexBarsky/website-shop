@@ -113,6 +113,24 @@ header .tabs li ul li a {
     padding: 10px;
     background-color: #F3F4EE;
 }
+header .sections i {
+    margin-left: 100px;
+}
+header .sections .topics {
+    background-color: #e8e9e3;
+    list-style-type: none;
+    position: absolute;
+    /* padding-top: 16px;
+    padding-bottom: 16px; */
+    left: 383px;
+    top: 86px;
+    width: 200px;
+    display: none;
+    z-index: 111;
+}
+header .sections li:hover .topics  {
+    display: block;
+}
 /* 
     Карусель (slider)
 */

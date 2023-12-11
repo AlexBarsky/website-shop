@@ -239,6 +239,10 @@ header .tabs li ul li a {
     padding: 15px;
     text-align: left;
     border-bottom: solid 1px #195C8D;
+    text-align: center;
+}
+.items .item div a{
+    padding: 18px;
 }
 .items .item .edit {
     color: #003D66;

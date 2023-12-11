@@ -31,14 +31,14 @@
             }else {
                 $pass = password_hash($pass_confirm, PASSWORD_DEFAULT);
     
-                $post = [
+                $params = [
                     'admin' => $admin,
                     'username' => $login,
                     'email' => $email,
                     'password' => $pass
                 ];
 
-                $id = insert('users', $post);
+                $id = insert('users', $params);
                 $user = select('users', ['id' => $id], true);
 
                 header('location: ' . BASE_URL . "login.php");
